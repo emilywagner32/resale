@@ -22,7 +22,7 @@ def load_data(csv):
     return data
 # Load the data
 data = load_data('resale.csv')
-tab1.dataframe(data)
+st.dataframe(data)
 
 
 def load_data(conn):
