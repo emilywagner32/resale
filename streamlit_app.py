@@ -22,7 +22,6 @@ def load_data(csv):
     return data
 # Load the data
 data = load_data('resale.csv')
-st.dataframe(data)
 
 edited_df = st.data_editor(data)
 
