@@ -25,7 +25,7 @@ data = load_data('resale.csv')
 
 edited_df = st.data_editor(data)
 
-Hello = "Hi dad, Love ya"
+
     
 if st.button("DAD CLICK HERE"):
-    st.write(Hello)
+    st.write("Hi Dad, Love You!)
