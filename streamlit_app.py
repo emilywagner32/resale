@@ -26,7 +26,7 @@ data = load_data('resale.csv')
 edited_df = st.data_editor(data)
 
 Hello = """
-Hi Dad , Love you
+Hi Dad Love you
 """
 
 def stream_data():
