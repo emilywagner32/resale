@@ -25,5 +25,3 @@ data = load_data('resale.csv')
 
 edited_df = st.data_editor(data)
 
-favorite_command = edited_df.loc[edited_df["SIZE"].idxmax()]["command"]
-
