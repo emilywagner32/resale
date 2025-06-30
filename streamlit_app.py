@@ -35,5 +35,5 @@ def stream_data():
         time.sleep(0.20)
 
     
- if st.button("DAD CLICK HERE"):
+if st.button("DAD CLICK HERE"):
     st.write_stream(stream_data)
