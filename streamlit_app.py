@@ -25,15 +25,7 @@ data = load_data('resale.csv')
 
 edited_df = st.data_editor(data)
 
-Hello = """
-Hi Dad Love You.
-"""
-
-def stream_data():
-    for word in Hello.split(" "):
-        yield word + " "
-        time.sleep(0.20)
-
+Hello = "Hi dad, Love ya"
     
 if st.button("DAD CLICK HERE"):
-    st.write_stream(stream_data)
+    st.write_stream(Hello)
