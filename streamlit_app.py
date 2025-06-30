@@ -9,25 +9,20 @@ import pandas as pd
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title="Inventory tracker",
-    page_icon=":shopping_bags:",  # This is an emoji shortcode. Could be a URL too.
-)
+    page_title="Resale Inventory Tracker", layout= 'wide')
 
 
 # -----------------------------------------------------------------------------
 # Declare some useful functions.
 
 
-def connect_db():
-    """Connects to the sqlite database."""
-
-    DB_FILENAME = Path(__file__).parent / "inventory.db"
-    db_already_exists = DB_FILENAME.exists()
-
-    conn = sqlite3.connect(DB_FILENAME)
-    db_was_just_created = not db_already_exists
-
-    return conn, db_was_just_created
+@st.cache_data(ttl=3600)
+def load_data(csv):
+    data = pd.read_csv('diabetes_012_health_indicators_BRFSS2015.csv')
+    return data
+# Load the data
+data = load_data('diabetes_012_health_indicators_BRFSS2015.csv')
+tab1.dataframe(data)
 
 
 def initialize_data(conn):
