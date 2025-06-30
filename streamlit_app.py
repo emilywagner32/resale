@@ -28,4 +28,4 @@ edited_df = st.data_editor(data)
 
     
 if st.button("DAD CLICK HERE"):
-    st.write("Hi Dad, Love You!)
+    st.write("Hi Dad, Love You!")
