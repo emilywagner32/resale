@@ -33,14 +33,4 @@ edited_df = st.data_editor(st.session_state.df, num_rows='dynamic')
 
 st.session_state.df = edited_df
 
-def df_to_excel(df):
-    output = BytesIO()
-    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-        df.to_excel(writer, sheet_name='Sheet1', index=False)
-    processed_data = output.getvalue()
-    return processed_data
 
-df_xlsx = df_to_excel(st.session_state.df)
-st.download_button(label='📥 Download Edited Data as Excel',
-                   data=df_xlsx ,
-                   file_name= 'edited_data.xlsx')
