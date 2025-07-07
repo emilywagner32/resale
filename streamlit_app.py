@@ -23,6 +23,10 @@ def load_data(csv):
 # Load the data
 data = load_data('resale.csv')
 
+
+if 'df' not in st.session_state:
+    data = pd.read_csv('resale.csv')
+    st.session_state.df = pd.DataFrame(data)
 st.session_state.df = data
 
 edited_df = st.data_editor(st.session_state.df, num_rows='dynamic')
