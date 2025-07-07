@@ -23,9 +23,4 @@ def load_data(csv):
 # Load the data
 data = load_data('resale.csv')
 
-edited_df = st.data_editor(data)
-
-
-    
-if st.button("DAD CLICK HERE"):
-    st.write("Hi Dad, Love You!")
+edited_df = st.data_editor(data, num_rows='dynamic')
